@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "779889768496",
+    "project_id": "horse-puzzle-l",
+    "storage_bucket": "horse-puzzle-l.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:779889768496:android:fd72e5dc311d6089b655f5",
+        "android_client_info": {
+          "package_name": "com.example.horsepuzzle"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "779889768496-hqov0ci4e140l5uon1ivsp360l1hvcbe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBANFBikJqdr3p_CvAh6iGmWWk-dV9Y-RI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "779889768496-hqov0ci4e140l5uon1ivsp360l1hvcbe.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

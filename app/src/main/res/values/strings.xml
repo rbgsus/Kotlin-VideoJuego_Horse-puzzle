@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Horse puzzle</string>
+    <string name="titulo">Horse puzzle</string>
+    <string name="nivel">Level</string>
+
+
+    <string name="movimientos">Moves</string>
+    <string name="puntuacion">Points</string>
+    <string name="vidas">Lives</string>
+    <string name="opciones">Option</string>
+    <string name="instrucciones">Mueve el caballo hasta llegar el número de veces requerido para completar el nivel</string>
+    <string name="creditos">Juego creado por Jesús Rodríguez Begines</string>
+
+    <string name="goldEdition">Pincha aquí para eliminar los anuncios</string>
+    <string name="goldTitulo">Consigue la edición oro para siempre</string>
+    <string name="gold1">No más anuncions</string>
+    <string name="gold2">Vidas ilimitadas</string>
+    <string name="gold3">Mantén tu nivel</string>
+    <string name="pago">Paga sólo 1€</string>
+    <string name="contrase_a">Contraseña</string>
+    <string name="title_activity_pantalla_inicio">PantallaInicio</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="_1_usuario_puntuacion">1º Usuario puntuacion</string>
+
+
+</resources>

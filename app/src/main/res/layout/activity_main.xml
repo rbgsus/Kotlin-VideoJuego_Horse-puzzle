@@ -1,0 +1,1001 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlscreen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blanco_fondo"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/lyGoldEdition"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/svJuego"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lyGoldEdition">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/orelega_oneregular"
+                android:paddingTop="0dp"
+                android:paddingBottom="0dp"
+                android:text="@string/titulo"
+                android:textAlignment="center"
+                android:textColor="@color/negro"
+                android:textSize="40sp" />
+
+            <TextView
+                android:id="@+id/nivel_titulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/titulo_fondo"
+                android:fontFamily="@font/orelega_oneregular"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:text="@string/nivel"
+                android:textAlignment="center"
+                android:textColor="@color/blanco_fondo"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/nivel_numero"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/titulo_nivel_fondo"
+                android:fontFamily="@font/orelega_oneregular"
+                android:paddingBottom="5dp"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="@color/blanco_fondo"
+                android:textSize="25sp" />
+
+            <LinearLayout
+                android:id="@+id/lymenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/movimientos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_menu_top"
+                        android:fontFamily="@font/orelega_oneregular"
+                        android:text="@string/movimientos"
+                        android:textAlignment="center"
+                        android:textColor="@color/negro"
+                        android:textSize="25sp" />
+
+                    <TextView
+                        android:id="@+id/movimientosBottom"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_menu_botton"
+                        android:fontFamily="@font/orelega_oneregular"
+                        android:text="0"
+                        android:textAlignment="center"
+                        android:textColor="@color/negro"
+
+                        android:textSize="25sp" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/vidasTop"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_menu_top"
+                        android:backgroundTint="@color/rojo"
+                        android:fontFamily="@font/orelega_oneregular"
+                        android:text="@string/vidas"
+                        android:textAlignment="center"
+                        android:textColor="@color/blanco_fondo"
+                        android:textSize="25sp" />
+
+                    <TextView
+                        android:id="@+id/vidasBottom"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_menu_botton"
+                        android:backgroundTint="@color/rojo"
+                        android:fontFamily="@font/orelega_oneregular"
+                        android:text="0"
+                        android:textAlignment="center"
+                        android:textColor="@color/blanco_fondo"
+                        android:textSize="25sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/puntuacionTop"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_menu_top"
+                        android:fontFamily="@font/orelega_oneregular"
+                        android:text="@string/puntuacion"
+                        android:textAlignment="center"
+                        android:textColor="@color/negro"
+                        android:textSize="25sp" />
+
+                    <TextView
+                        android:id="@+id/puntuacionBottom"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_menu_botton"
+                        android:fontFamily="@font/orelega_oneregular"
+                        android:text="0"
+                        android:textAlignment="center"
+                        android:textColor="@color/negro"
+
+                        android:textSize="25sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/opcionesTop"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_menu_top"
+                        android:fontFamily="@font/orelega_oneregular"
+                        android:text="@string/opciones"
+                        android:textAlignment="center"
+                        android:textColor="@color/negro"
+                        android:textSize="25sp" />
+
+                    <TextView
+                        android:id="@+id/opcionesBottomBonus"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_menu_botton"
+                        android:fontFamily="@font/orelega_oneregular"
+                        android:text="0"
+                        android:textAlignment="center"
+                        android:textColor="@color/negro"
+                        android:textSize="25sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <TableLayout
+                    android:id="@+id/tltablero"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp">
+                    <!-- TABLERO -->
+                    <TableRow android:weightSum="8">
+
+                        <ImageView
+                            android:id="@+id/c00"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_column="0"
+                            android:layout_weight="1"
+                            android:background="@color/color1"
+                            android:onClick="compruebaCeldaPulsada"
+                            android:tag="c00" />
+
+                        <ImageView
+                            android:id="@+id/c01"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_column="1"
+                            android:layout_weight="1"
+                            android:background="@color/color2"
+                            android:onClick="compruebaCeldaPulsada"
+                            android:tag="c01" />
+
+                        <ImageView
+                            android:id="@+id/c02"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_column="0"
+                            android:layout_weight="1"
+                            android:background="@color/color1"
+                            android:onClick="compruebaCeldaPulsada"
+                            android:tag="c02" />
+
+                        <ImageView
+                            android:id="@+id/c03"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_column="1"
+                            android:layout_weight="1"
+                            android:background="@color/color2"
+                            android:onClick="compruebaCeldaPulsada"
+                            android:tag="c03" />
+
+                        <ImageView
+                            android:id="@+id/c04"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_column="0"
+                            android:layout_weight="1"
+                            android:background="@color/color1"
+                            android:onClick="compruebaCeldaPulsada"
+                            android:tag="c04" />
+
+                        <ImageView
+                            android:id="@+id/c05"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_column="1"
+                            android:layout_weight="1"
+                            android:background="@color/color2"
+                            android:onClick="compruebaCeldaPulsada"
+                            android:tag="c05" />
+
+
+                        <ImageView
+                            android:id="@+id/c06"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_column="0"
+                            android:layout_weight="1"
+                            android:background="@color/color1"
+                            android:onClick="compruebaCeldaPulsada"
+                            android:tag="c06" />
+
+                        <ImageView
+                            android:id="@+id/c07"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_column="1"
+                            android:layout_weight="1"
+                            android:background="@color/color2"
+                            android:onClick="compruebaCeldaPulsada"
+                            android:tag="c07" />
+                    </TableRow>
+                    <TableRow android:weightSum="8">
+
+                        <ImageView
+                            android:id="@+id/c10"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_column="0"
+                            android:layout_weight="1"
+                            android:background="@color/color2"
+                            android:onClick="compruebaCeldaPulsada"
+                            android:tag="c10" />
+
+                        <ImageView
+                            android:id="@+id/c11"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_column="1"
+                            android:layout_weight="1"
+                            android:background="@color/color1"
+                            android:onClick="compruebaCeldaPulsada"
+                            android:tag="c11" />
+
+                        <ImageView
+                            android:id="@+id/c12"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_column="0"
+                            android:layout_weight="1"
+                            android:background="@color/color2"
+                            android:onClick="compruebaCeldaPulsada"
+                            android:tag="c12" />
+
+                        <ImageView
+                            android:id="@+id/c13"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_column="1"
+                            android:layout_weight="1"
+                            android:background="@color/color1"
+                            android:onClick="compruebaCeldaPulsada"
+                            android:tag="c13" />
+
+                        <ImageView
+                            android:id="@+id/c14"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_column="0"
+                            android:layout_weight="1"
+                            android:background="@color/color2"
+                            android:onClick="compruebaCeldaPulsada"
+                            android:tag="c14" />
+
+                        <ImageView
+                            android:id="@+id/c15"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_column="1"
+                            android:layout_weight="1"
+                            android:background="@color/color1"
+                            android:onClick="compruebaCeldaPulsada"
+                            android:tag="c15" />
+
+
+                        <ImageView
+                            android:id="@+id/c16"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_column="0"
+                            android:layout_weight="1"
+                            android:background="@color/color2"
+                            android:onClick="compruebaCeldaPulsada"
+                            android:tag="c16" />
+
+                        <ImageView
+                            android:id="@+id/c17"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_column="1"
+                            android:layout_weight="1"
+                            android:background="@color/color1"
+                            android:onClick="compruebaCeldaPulsada"
+                            android:tag="c17" />
+                    </TableRow>
+                    <TableRow android:weightSum="8">
+
+                        <ImageView
+                            android:id="@+id/c20"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_column="0"
+                            android:layout_weight="1"
+                            android:background="@color/color1"
+                            android:onClick="compruebaCeldaPulsada"
+                            android:tag="c20" />
+
+                        <ImageView
+                            android:id="@+id/c21"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_column="1"
+                            android:layout_weight="1"
+                            android:background="@color/color2"
+                            android:onClick="compruebaCeldaPulsada"
+                            android:tag="c21" />
+
+                        <ImageView
+                            android:id="@+id/c22"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_column="0"
+                            android:layout_weight="1"
+                            android:background="@color/color1"
+                            android:onClick="compruebaCeldaPulsada"
+                            android:tag="c22" />
+
+                        <ImageView
+                            android:id="@+id/c23"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_column="1"
+                            android:layout_weight="1"
+                            android:background="@color/color2"
+                            android:onClick="compruebaCeldaPulsada"
+                            android:tag="c23" />
+
+                        <ImageView
+                            android:id="@+id/c24"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_column="0"
+                            android:layout_weight="1"
+                            android:background="@color/color1"
+                            android:onClick="compruebaCeldaPulsada"
+                            android:tag="c24" />
+
+                        <ImageView
+                            android:id="@+id/c25"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_column="1"
+                            android:layout_weight="1"
+                            android:background="@color/color2"
+                            android:onClick="compruebaCeldaPulsada"
+                            android:tag="c25" />
+
+
+                        <ImageView
+                            android:id="@+id/c26"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_column="0"
+                            android:layout_weight="1"
+                            android:background="@color/color1"
+                            android:onClick="compruebaCeldaPulsada"
+                            android:tag="c26" />
+
+                        <ImageView
+                            android:id="@+id/c27"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_column="1"
+                            android:layout_weight="1"
+                            android:background="@color/color2"
+                            android:onClick="compruebaCeldaPulsada"
+                            android:tag="c27" />
+                    </TableRow>
+                    <TableRow android:weightSum="8">
+
+                        <ImageView
+                            android:id="@+id/c30"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_column="0"
+                            android:layout_weight="1"
+                            android:background="@color/color2"
+                            android:onClick="compruebaCeldaPulsada"
+                            android:tag="c30" />
+
+                        <ImageView
+                            android:id="@+id/c31"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_column="1"
+                            android:layout_weight="1"
+                            android:background="@color/color1"
+                            android:onClick="compruebaCeldaPulsada"
+                            android:tag="c31" />
+
+                        <ImageView
+                            android:id="@+id/c32"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_column="0"
+                            android:layout_weight="1"
+                            android:background="@color/color2"
+                            android:onClick="compruebaCeldaPulsada"
+                            android:tag="c32" />
+
+                        <ImageView
+                            android:id="@+id/c33"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_column="1"
+                            android:layout_weight="1"
+                            android:background="@color/color1"
+                            android:onClick="compruebaCeldaPulsada"
+                            android:tag="c33" />
+
+                        <ImageView
+                            android:id="@+id/c34"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_column="0"
+                            android:layout_weight="1"
+                            android:background="@color/color2"
+                            android:onClick="compruebaCeldaPulsada"
+                            android:tag="c34" />
+
+                        <ImageView
+                            android:id="@+id/c35"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_column="1"
+                            android:layout_weight="1"
+                            android:background="@color/color1"
+                            android:onClick="compruebaCeldaPulsada"
+                            android:tag="c35" />
+
+
+                        <ImageView
+                            android:id="@+id/c36"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_column="0"
+                            android:layout_weight="1"
+                            android:background="@color/color2"
+                            android:onClick="compruebaCeldaPulsada"
+                            android:tag="c36" />
+
+                        <ImageView
+                            android:id="@+id/c37"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_column="1"
+                            android:layout_weight="1"
+                            android:background="@color/color1"
+                            android:onClick="compruebaCeldaPulsada"
+                            android:tag="c37" />
+                    </TableRow>
+                    <TableRow android:weightSum="8">
+
+                        <ImageView
+                            android:id="@+id/c40"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_column="0"
+                            android:layout_weight="1"
+                            android:background="@color/color1"
+                            android:onClick="compruebaCeldaPulsada"
+                            android:tag="c40" />
+
+                        <ImageView
+                            android:id="@+id/c41"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_column="1"
+                            android:layout_weight="1"
+                            android:background="@color/color2"
+                            android:onClick="compruebaCeldaPulsada"
+                            android:tag="c41" />
+
+                        <ImageView
+                            android:id="@+id/c42"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_column="0"
+                            android:layout_weight="1"
+                            android:background="@color/color1"
+                            android:onClick="compruebaCeldaPulsada"
+                            android:tag="c42" />
+
+                        <ImageView
+                            android:id="@+id/c43"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_column="1"
+                            android:layout_weight="1"
+                            android:background="@color/color2"
+                            android:onClick="compruebaCeldaPulsada"
+                            android:tag="c43" />
+
+                        <ImageView
+                            android:id="@+id/c44"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_column="0"
+                            android:layout_weight="1"
+                            android:background="@color/color1"
+                            android:onClick="compruebaCeldaPulsada"
+                            android:tag="c44" />
+
+                        <ImageView
+                            android:id="@+id/c45"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_column="1"
+                            android:layout_weight="1"
+                            android:background="@color/color2"
+                            android:onClick="compruebaCeldaPulsada"
+                            android:tag="c45" />
+
+
+                        <ImageView
+                            android:id="@+id/c46"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_column="0"
+                            android:layout_weight="1"
+                            android:background="@color/color1"
+                            android:onClick="compruebaCeldaPulsada"
+                            android:tag="c46" />
+
+                        <ImageView
+                            android:id="@+id/c47"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_column="1"
+                            android:layout_weight="1"
+                            android:background="@color/color2"
+                            android:onClick="compruebaCeldaPulsada"
+                            android:tag="c47" />
+                    </TableRow>
+                    <TableRow android:weightSum="8">
+
+                        <ImageView
+                            android:id="@+id/c50"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_column="0"
+                            android:layout_weight="1"
+                            android:background="@color/color2"
+                            android:onClick="compruebaCeldaPulsada"
+                            android:tag="c50" />
+
+                        <ImageView
+                            android:id="@+id/c51"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_column="1"
+                            android:layout_weight="1"
+                            android:background="@color/color1"
+                            android:onClick="compruebaCeldaPulsada"
+                            android:tag="c51" />
+
+                        <ImageView
+                            android:id="@+id/c52"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_column="0"
+                            android:layout_weight="1"
+                            android:background="@color/color2"
+                            android:onClick="compruebaCeldaPulsada"
+                            android:tag="c52" />
+
+                        <ImageView
+                            android:id="@+id/c53"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_column="1"
+                            android:layout_weight="1"
+                            android:background="@color/color1"
+                            android:onClick="compruebaCeldaPulsada"
+                            android:tag="c53" />
+
+                        <ImageView
+                            android:id="@+id/c54"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_column="0"
+                            android:layout_weight="1"
+                            android:background="@color/color2"
+                            android:onClick="compruebaCeldaPulsada"
+                            android:tag="c54" />
+
+                        <ImageView
+                            android:id="@+id/c55"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_column="1"
+                            android:layout_weight="1"
+                            android:background="@color/color1"
+                            android:onClick="compruebaCeldaPulsada"
+                            android:tag="c55" />
+
+
+                        <ImageView
+                            android:id="@+id/c56"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_column="0"
+                            android:layout_weight="1"
+                            android:background="@color/color2"
+                            android:onClick="compruebaCeldaPulsada"
+                            android:tag="c56" />
+
+                        <ImageView
+                            android:id="@+id/c57"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_column="1"
+                            android:layout_weight="1"
+                            android:background="@color/color1"
+                            android:onClick="compruebaCeldaPulsada"
+                            android:tag="c57" />
+                    </TableRow>
+                    <TableRow android:weightSum="8">
+
+                        <ImageView
+                            android:id="@+id/c60"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_column="0"
+                            android:layout_weight="1"
+                            android:background="@color/color1"
+                            android:onClick="compruebaCeldaPulsada"
+                            android:tag="c60" />
+
+                        <ImageView
+                            android:id="@+id/c61"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_column="1"
+                            android:layout_weight="1"
+                            android:background="@color/color2"
+                            android:onClick="compruebaCeldaPulsada"
+                            android:tag="c610" />
+
+                        <ImageView
+                            android:id="@+id/c62"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_column="0"
+                            android:layout_weight="1"
+                            android:background="@color/color1"
+                            android:onClick="compruebaCeldaPulsada"
+                            android:tag="c62" />
+
+                        <ImageView
+                            android:id="@+id/c63"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_column="1"
+                            android:layout_weight="1"
+                            android:background="@color/color2"
+                            android:onClick="compruebaCeldaPulsada"
+                            android:tag="c63" />
+
+                        <ImageView
+                            android:id="@+id/c64"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_column="0"
+                            android:layout_weight="1"
+                            android:background="@color/color1"
+                            android:onClick="compruebaCeldaPulsada"
+                            android:tag="c64" />
+
+                        <ImageView
+                            android:id="@+id/c65"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_column="1"
+                            android:layout_weight="1"
+                            android:background="@color/color2"
+                            android:onClick="compruebaCeldaPulsada"
+                            android:tag="c65" />
+
+
+                        <ImageView
+                            android:id="@+id/c66"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_column="0"
+                            android:layout_weight="1"
+                            android:background="@color/color1"
+                            android:onClick="compruebaCeldaPulsada"
+                            android:tag="c66" />
+
+                        <ImageView
+                            android:id="@+id/c67"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_column="1"
+                            android:layout_weight="1"
+                            android:background="@color/color2"
+                            android:onClick="compruebaCeldaPulsada"
+                            android:tag="c67" />
+                    </TableRow>
+                    <TableRow android:weightSum="8">
+
+                        <ImageView
+                            android:id="@+id/c70"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_column="0"
+                            android:layout_weight="1"
+                            android:background="@color/color2"
+                            android:onClick="compruebaCeldaPulsada"
+                            android:tag="c70" />
+
+                        <ImageView
+                            android:id="@+id/c71"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_column="1"
+                            android:layout_weight="1"
+                            android:background="@color/color1"
+                            android:onClick="compruebaCeldaPulsada"
+                            android:tag="c71" />
+
+                        <ImageView
+                            android:id="@+id/c72"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_column="0"
+                            android:layout_weight="1"
+                            android:background="@color/color2"
+                            android:onClick="compruebaCeldaPulsada"
+                            android:tag="c72" />
+
+                        <ImageView
+                            android:id="@+id/c73"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_column="1"
+                            android:layout_weight="1"
+                            android:background="@color/color1"
+                            android:onClick="compruebaCeldaPulsada"
+                            android:tag="c73" />
+
+                        <ImageView
+                            android:id="@+id/c74"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_column="0"
+                            android:layout_weight="1"
+                            android:background="@color/color2"
+                            android:onClick="compruebaCeldaPulsada"
+                            android:tag="c74" />
+
+                        <ImageView
+                            android:id="@+id/c75"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_column="1"
+                            android:layout_weight="1"
+                            android:background="@color/color1"
+                            android:onClick="compruebaCeldaPulsada"
+                            android:tag="c75" />
+
+
+                        <ImageView
+                            android:id="@+id/c76"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_column="0"
+                            android:layout_weight="1"
+                            android:background="@color/color2"
+                            android:onClick="compruebaCeldaPulsada"
+                            android:tag="c76" />
+
+                        <ImageView
+                            android:id="@+id/c77"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_column="1"
+                            android:layout_weight="1"
+                            android:background="@color/color1"
+                            android:onClick="compruebaCeldaPulsada"
+                            android:tag="c77" />
+                    </TableRow>
+
+                </TableLayout>
+
+
+
+
+
+                <LinearLayout
+                    android:id="@+id/lymensaje"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/beigeTransparente"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+
+                    <TextView
+                        android:id="@+id/tvpantallaniveles"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="30dp"
+                        android:fontFamily="@font/orelega_oneregular"
+                        android:shadowColor="@color/blanco_fondo"
+                        android:shadowRadius="8"
+                        android:text="Nivel: 1"
+                        android:textAlignment="center"
+                        android:textSize="70sp"
+                        android:textColor="@color/negro">
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/tvintroniveles"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="40dp"
+                        android:fontFamily="@font/orelega_oneregular"
+                        android:shadowColor="@color/blanco_fondo"
+                        android:shadowRadius="8"
+                        android:text="Vidas: 1"
+                        android:textSize="45sp"
+                        android:textColor="@color/negro"
+                        android:textAlignment="center">
+                    </TextView>
+
+
+                    <TextView
+                        android:id="@+id/tvResultado"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginRight="24dp"
+                        android:layout_marginTop="50dp"
+                        android:paddingTop="12dp"
+                        android:background="@color/negro"
+                        android:fontFamily="@font/orelega_oneregular"
+                        android:textAlignment="center"
+                        android:text="Siguiente nivel"
+                        android:textSize="24sp"
+                        android:textColor="@color/blanco_fondo"
+                        android:onClick="lanzaAccion"
+                        android:layout_marginBottom="20dp">
+                        <!--TODO -->
+                    </TextView>
+
+
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvinstrucciones"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/orelega_oneregular"
+                android:text="@string/instrucciones"
+                android:textAlignment="center"
+                android:textColor="@color/negro"
+                android:textSize="18sp"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:id="@+id/tvcreditos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/orelega_oneregular"
+                android:text="@string/creditos"
+                android:textAlignment="center"
+                android:textColor="@color/negro"
+                android:textSize="20sp"
+                android:layout_marginTop="5dp" />
+
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
